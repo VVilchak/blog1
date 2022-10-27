@@ -13,8 +13,8 @@
     );
 
     slideContainer.innerHTML = slides[currentSlideIdx];
-  }
-  /* if (window.innerWidth > 400) {
+
+    /* if (window.innerWidth > 400) {
       const secondSlideIdx =
         currentSlideIdx + 1 >= slides.length ? 0 : currentSlideIdx + 1;
       slideContainer.innerHTML += slides[secondSlideIdx];
@@ -28,8 +28,8 @@
           thirdSlideIdx + 1 >= slides.length ? 0 : thirdSlideIdx + 1;
         slideContainer.innerHTML += slides[fourthSlideIdx];
       }
-    }
-  } */
+    }*/
+  }
   function nextSlide() {
     currentSlideIdx =
       currentSlideIdx + 1 >= slides.length ? 0 : currentSlideIdx + 1;

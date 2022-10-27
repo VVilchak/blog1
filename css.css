@@ -93,7 +93,7 @@ a {
   justify-content: center;
 }
 .brands-carousel__slide-container {
-  display: flex;
   width: 350px;
   height: 200px;
+  display: flex;
 }
