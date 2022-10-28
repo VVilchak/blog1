@@ -14,21 +14,26 @@
 
     slideContainer.innerHTML = slides[currentSlideIdx];
 
-    /* if (window.innerWidth > 400) {
+    if (window.innerWidth > 350) {
       const secondSlideIdx =
         currentSlideIdx + 1 >= slides.length ? 0 : currentSlideIdx + 1;
       slideContainer.innerHTML += slides[secondSlideIdx];
-      if (window.innerWidth > 600) {
+      if (window.innerWidth > 500) {
         const thirdSlideIdx =
           secondSlideIdx + 1 >= slides.length ? 0 : secondSlideIdx + 1;
-        slideContainer.innerHTML += slides[thirdSlideIdx];
+
+        if (window.innerWidth > 700) {
+          const fourthSlideIdx =
+            thirdSlideIdx + 1 >= slides.length ? 0 : thirdSlideIdx + 1;
+          slideContainer.innerHTML += slides[fourthSlideIdx];
+          if (window.innerWidth > 900) {
+            const fifthSlideIdx =
+              fourthSlideIdx + 1 >= slides.length ? 0 : fourthSlideIdx + 1;
+            slideContainer.innerHTML += slides[fifthSlideIdx];
+          }
+        }
       }
-      if (window.innerWidth > 800) {
-        const fourthSlideIdx =
-          thirdSlideIdx + 1 >= slides.length ? 0 : thirdSlideIdx + 1;
-        slideContainer.innerHTML += slides[fourthSlideIdx];
-      }
-    }*/
+    }
   }
   function nextSlide() {
     currentSlideIdx =
@@ -46,4 +51,6 @@
   nextButton.addEventListener("click", nextSlide);
   const prevButton = document.querySelector(".brands-carousel__prev");
   prevButton.addEventListener("click", prevSlide);
+
+  window.addEventListener("resize", renderSlide);
 })();
