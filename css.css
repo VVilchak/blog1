@@ -44,16 +44,20 @@ a {
 }
 .blog-title {
   color: var(--main-text-color);
-  font-size: 38px;
-  line-height: 43px;
+  padding-bottom: 13px;
+  font-size: 52px;
+  line-height: 59px;
+  font-weight: 400;
   text-align: center;
 }
+
 .blog-subtitle {
   color: var(--paragraph-text-color);
   font-family: "PT Sans", sans-serif;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
+  margin-top: 15px;
 }
 .red-dot {
   color: var(--alternate-text-color);
@@ -67,20 +71,24 @@ a {
   height: 450px;
   max-width: 1000px;
   justify-content: center;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 600;
   line-height: 32;
   align-items: center;
   margin: 0 auto;
+  font-family: "PT Sans", sans-serif;
 }
-.carousel__brands {
+/*.carousel__brands {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 20px;
+}*/
+.blog {
+  margin-top: 40px;
 }
-
+/*
 .brands-carousel {
   display: flex;
   margin: auto;
@@ -100,4 +108,169 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.fa-circle-arrow-left,
+.fa-circle-arrow-right {
+  color: #222323;
+  font-size: 2em;
+}
+.fa-circle-arrow-right:hover {
+  color: rgba(33, 39, 54, 0.12);
+}
+.fa-circle-arrow-left:hover {
+  color: rgba(33, 39, 54, 0.12);
+}
+.brands-carousel__prev,
+.brands-carousel__next {
+  outline: none;
+  border: 0;
+  background: transparent;
+}*/
+#blog {
+  margin-top: 100px;
+}
+.brands-carousel {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  min-width: 320px;
+  font-size: 17px;
+  line-height: 1.5;
+}
+.brands-carousel-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80%;
+}
+.brands-carousel__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  min-width: 190;
+  max-height: 200px;
+  min-height: 180px;
+  margin: 80px 40px;
+  border: 1px solid rgba(33, 39, 54, 0.12);
+}
+.brands-carousel__img {
+  width: 100%;
+  height: 100%;
+}
+.brands-carousel-prev {
+  position: absolute;
+  top: 45%;
+  left: 25px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border: 0px;
+  background-color: rgb(68, 68, 68);
+}
+.brands-carousel-next {
+  position: absolute;
+  top: 45%;
+  right: 25px;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  border: 0px;
+  background-color: rgb(68, 68, 68);
+}
+.brands-carousel__btn-prev {
+  transform: rotate(180deg);
+  width: 12px;
+  height: 12px;
+}
+.brands-carousel__btn-next {
+  width: 12px;
+  height: 12px;
+}
+@media (min-width: 400px) {
+  .brands-carousel__item {
+    min-height: 318px;
+  }
+}
+@media (min-width: 510px) {
+  .brands-carousel__item {
+    min-height: 378px;
+  }
+}
+@media (min-width: 610px) {
+  .brands-carousel__item {
+    min-height: 498px;
+  }
+}
+@media (min-width: 768px) {
+  .brands-carousel-container {
+    justify-content: space-around;
+  }
+  .brands-carousel__item {
+    display: flex;
+    align-items: center;
+    width: auto;
+    min-width: 300px;
+    padding: 0;
+    margin: 100px 20px;
+    min-height: 274px;
+  }
+  .brands-carousel__img {
+    width: 80%;
+    max-width: 200px;
+    height: 50%;
+  }
+}
+@media (min-width: 850px) {
+  .brands-carousel__item {
+    min-height: 348px;
+    min-width: 370px;
+  }
+}
+@media (min-width: 990px) {
+  .brands-carousel__item {
+    min-height: 178px;
+    min-width: 170px;
+  }
+}
+@media (min-width: 1100px) {
+  .brands-carousel__item {
+    min-height: 208px;
+    min-width: 230px;
+  }
+}
+@media (min-width: 1200px) {
+  .brands-carousel__item {
+    min-height: 228px;
+    min-width: 260px;
+  }
+  .brands-carousel-prev {
+    top: 45%;
+    left: 60px;
+    background-color: transparent;
+  }
+  .brands-carousel-next {
+    top: 45%;
+    right: 60px;
+    background-color: transparent;
+  }
+  .brands-carousel__btn-next {
+    width: 27px;
+    height: 27px;
+    fill: rgb(119, 119, 119);
+  }
+  .brands-carousel__btn-prev {
+    width: 27px;
+    height: 27px;
+    fill: rgb(119, 119, 119);
+  }
+  .brands-carousel__btn-prev:hover {
+    fill: black;
+  }
+  .brands-carousel__btn-next:hover {
+    fill: black;
+  }
 }
