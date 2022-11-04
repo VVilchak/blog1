@@ -16,7 +16,6 @@
   --alternate-p-text-color: #fff;
   --uperline-background-color: #d60307;
 }
-
 .container {
   width: 100%;
   max-width: 1200px;
@@ -36,6 +35,8 @@ a {
   text-decoration: none;
   color: inherit;
 }
+/*==================================================================*/
+
 .divider-component {
   margin: 0 auto;
   height: 2px;
@@ -58,6 +59,7 @@ a {
   line-height: 30px;
   text-align: center;
   margin-top: 15px;
+  margin-bottom: 15px;
 }
 .red-dot {
   color: var(--alternate-text-color);
@@ -78,16 +80,7 @@ a {
   margin: 0 auto;
   font-family: "PT Sans", sans-serif;
 }
-/*.carousel__brands {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-}*/
-.blog {
-  margin-top: 40px;
-}
+
 /*
 .brands-carousel {
   display: flex;
@@ -127,41 +120,36 @@ a {
   background: transparent;
 }*/
 #blog {
-  margin-top: 100px;
+  margin-top: 5px;
 }
 .brands-carousel {
-  position: relative;
   display: flex;
   justify-content: center;
   min-width: 320px;
   font-size: 17px;
   line-height: 1.5;
+  position: relative;
 }
 .brands-carousel-container {
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 80%;
 }
-.brands-carousel__item {
+.slide {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: auto;
-  height: auto;
-  min-width: 190;
-  max-height: 200px;
-  min-height: 180px;
-  margin: 80px 40px;
   border: 1px solid rgba(33, 39, 54, 0.12);
+  padding: 20px 20px;
+  margin: 20px 20px;
 }
 .brands-carousel__img {
-  width: 100%;
-  height: 100%;
+  max-width: 400px;
 }
 .brands-carousel-prev {
+  transform: rotate(180deg);
+  padding: 5px;
+
   position: absolute;
   top: 45%;
   left: 25px;
@@ -169,7 +157,7 @@ a {
   width: 28px;
   height: 28px;
   border: 0px;
-  background-color: rgb(68, 68, 68);
+  background-color: rgb(187, 187, 187);
 }
 .brands-carousel-next {
   position: absolute;
@@ -177,12 +165,12 @@ a {
   right: 25px;
   border-radius: 50%;
   width: 28px;
-  height: 28px;
+  height: 29px;
   border: 0px;
-  background-color: rgb(68, 68, 68);
+  padding: 5px;
+  background-color: rgb(187, 187, 187);
 }
 .brands-carousel__btn-prev {
-  transform: rotate(180deg);
   width: 12px;
   height: 12px;
 }
@@ -190,26 +178,12 @@ a {
   width: 12px;
   height: 12px;
 }
-@media (min-width: 400px) {
-  .brands-carousel__item {
-    min-height: 318px;
-  }
-}
-@media (min-width: 510px) {
-  .brands-carousel__item {
-    min-height: 378px;
-  }
-}
-@media (min-width: 610px) {
-  .brands-carousel__item {
-    min-height: 498px;
-  }
-}
+
 @media (min-width: 768px) {
   .brands-carousel-container {
     justify-content: space-around;
   }
-  .brands-carousel__item {
+  .slide {
     display: flex;
     align-items: center;
     width: auto;
@@ -224,35 +198,28 @@ a {
     height: 50%;
   }
 }
-@media (min-width: 850px) {
-  .brands-carousel__item {
-    min-height: 348px;
-    min-width: 370px;
-  }
-}
+
 @media (min-width: 990px) {
-  .brands-carousel__item {
+  .slide {
     min-height: 178px;
     min-width: 170px;
   }
 }
-@media (min-width: 1100px) {
-  .brands-carousel__item {
-    min-height: 208px;
-    min-width: 230px;
-  }
-}
+
 @media (min-width: 1200px) {
-  .brands-carousel__item {
+  .slide {
     min-height: 228px;
     min-width: 260px;
   }
   .brands-carousel-prev {
+    padding: 0;
     top: 45%;
     left: 60px;
     background-color: transparent;
   }
   .brands-carousel-next {
+    padding: 0;
+
     top: 45%;
     right: 60px;
     background-color: transparent;
@@ -260,17 +227,9 @@ a {
   .brands-carousel__btn-next {
     width: 27px;
     height: 27px;
-    fill: rgb(119, 119, 119);
   }
   .brands-carousel__btn-prev {
     width: 27px;
     height: 27px;
-    fill: rgb(119, 119, 119);
-  }
-  .brands-carousel__btn-prev:hover {
-    fill: black;
-  }
-  .brands-carousel__btn-next:hover {
-    fill: black;
   }
 }
