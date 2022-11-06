@@ -40,6 +40,12 @@ a {
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.blog-container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
 .divider-component {
   margin: 0 auto;
   height: 2px;
@@ -49,8 +55,8 @@ a {
 .blog-title {
   color: var(--main-text-color);
   padding-bottom: 13px;
-  font-size: 52px;
-  line-height: 59px;
+  font-size: 38px;
+  line-height: 43px;
   font-weight: 400;
   text-align: center;
   margin-top: 30px;
@@ -75,7 +81,6 @@ a {
   border: 1px solid rgba(33, 39, 54, 0.12);
   display: flex;
   height: 450px;
-  max-width: 1000px;
   justify-content: center;
   font-size: 26px;
   font-weight: 600;
@@ -118,7 +123,7 @@ a {
   padding: 5px;
   position: absolute;
   top: 45%;
-  left: 25px;
+  left: 0;
   border-radius: 50%;
   width: 28px;
   height: 28px;
@@ -129,7 +134,8 @@ a {
 .brands-carousel-next {
   position: absolute;
   top: 45%;
-  right: 30px;
+
+  right: 0;
   border-radius: 50%;
   width: 28px;
   height: 29px;
@@ -146,6 +152,12 @@ a {
   width: 12px;
   height: 12px;
 }
+.brands-carousel-next:hover {
+  background-color: transparent;
+}
+.brands-carousel-prev:hover {
+  background-color: transparent;
+}
 
 @media (min-width: 600px) {
   .brands-carousel-container {
@@ -160,10 +172,14 @@ a {
     height: 100;
   }
   .brands-carousel-prev {
-    left: 10px;
+    left: 0px;
   }
   .brands-carousel-next {
-    right: 10px;
+    right: 0px;
+  }
+  .blog-title {
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 @media (min-width: 768px) {
@@ -171,11 +187,19 @@ a {
     min-width: 170px;
     height: 150px;
   }
+  .blog-title {
+    font-size: 38px;
+    line-height: 43px;
+  }
 }
 @media (min-width: 990px) {
   .slide {
     min-width: 170px;
     height: 150px;
+  }
+  .blog-title {
+    font-size: 45px;
+    line-height: 51px;
   }
 }
 
@@ -187,7 +211,7 @@ a {
   }
   .brands-carousel-prev {
     padding: 5px;
-    left: 20px;
+    left: 0px;
     background-color: #a594943b;
     cursor: pointer;
     width: 40px;
@@ -195,18 +219,10 @@ a {
   }
   .brands-carousel-next {
     padding: 5px;
-
-    right: 20px;
+    right: 0;
     background-color: #a594943b;
     cursor: pointer;
     width: 40px;
     height: 40px;
-  }
-
-  .brands-carousel-next:hover {
-    background-color: transparent;
-  }
-  .brands-carousel-prev:hover {
-    background-color: transparent;
   }
 }
